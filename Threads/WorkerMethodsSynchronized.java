@@ -31,7 +31,7 @@ public class WorkerMethodsSynchronized {
         }
     }
 
-    public synchronized void stageTwo() {
+    public  void stageTwo() {
 
         synchronized (list2) {
             try {

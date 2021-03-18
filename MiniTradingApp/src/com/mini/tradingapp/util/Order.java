@@ -1,27 +1,31 @@
 package com.mini.tradingapp.util;
 
+/**
+ * Order class used to store all the order details.
+ */
+
 import java.util.Date;
 
-public class Order implements Cloneable{
+public class Order implements Cloneable {
 
     private Long orderId;
     private double price;
     private OrderType orderType;
     private Long qty;
     private Stock stockID;
-    private Date creationDate=new Date();
+    private Date creationDate = new Date();
     private OrderStatus orderStatus;
     private String traderCode;
 
-    public Order(Long orderId, double price, OrderType orderType, Long qty, Stock stockID,String traderCode) {
+    public Order(Long orderId, double price, OrderType orderType, Long qty, Stock stockID, String traderCode) {
         this.orderId = orderId;
         this.price = price;
         this.orderType = orderType;
         this.qty = qty;
         this.stockID = stockID;
-        this.traderCode=traderCode;
-        this.traderCode=traderCode;
-        this.orderStatus=OrderStatus.OPEN;
+        this.traderCode = traderCode;
+        this.traderCode = traderCode;
+        this.orderStatus = OrderStatus.OPEN;
     }
 
     public Long getOrderId() {

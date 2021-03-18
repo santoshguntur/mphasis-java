@@ -1,20 +1,24 @@
 package com.mini.tradingapp.util;
 
-public enum Stock {
-    RELIANCE(1,"RELIANCE","RILI"),
-    YESBANK(2,"YES BANK","YESB"),
-    MAJESCO(3,"MAJESCO","MAJS"),
-    INFOSYS(4,"INFOSYS","INFY");
+/**
+ * Class holds all the stock details.
+ */
+public class Stock {
 
-
+    /**
+     * unique for each stock
+     */
     private final int stockCode;
     private final String stockName;
+    /**
+     * unique for each stock
+     */
     private final String stockTickerCode;
 
-    Stock(int stockCode, String stockName, String stockTickerCode) {
-        this.stockCode=stockCode;
-        this.stockName=stockName;
-        this.stockTickerCode=stockTickerCode;
+    public Stock(int stockCode, String stockName, String stockTickerCode) {
+        this.stockCode = stockCode;
+        this.stockName = stockName;
+        this.stockTickerCode = stockTickerCode;
     }
 
     public int getStockCode() {
@@ -27,5 +31,14 @@ public enum Stock {
 
     public String getStockTickerCode() {
         return stockTickerCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Stock{" +
+                "stockCode=" + stockCode +
+                ", stockName='" + stockName + '\'' +
+                ", stockTickerCode='" + stockTickerCode + '\'' +
+                '}';
     }
 }

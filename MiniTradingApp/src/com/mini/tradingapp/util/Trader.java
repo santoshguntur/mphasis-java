@@ -1,5 +1,10 @@
 package com.mini.tradingapp.util;
 
+import java.util.Objects;
+
+/**
+ * Trader class contains all the information of the traders.
+ */
 public class Trader {
     String traderID;
     String traderName;
@@ -73,5 +78,18 @@ public class Trader {
         this.traderName = traderName;
         this.traderContactNumber = traderContactNumber;
         this.traderAddress = traderAddress;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Trader trader = (Trader) o;
+        return traderID.equals(trader.traderID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(traderID);
     }
 }

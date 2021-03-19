@@ -1,4 +1,4 @@
-package com.mini.tradingapp.util;
+package com.mini.tradingapp.dto;
 
 /**
  * OrderType is enum represent the order types accepted.

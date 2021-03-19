@@ -1,4 +1,4 @@
-package com.mini.tradingapp.util;
+package com.mini.tradingapp.dto;
 
 /**
  * Order class used to store all the order details.
